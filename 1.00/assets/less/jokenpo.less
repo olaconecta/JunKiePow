@@ -10,7 +10,7 @@ header {
     /* background: url('../img/overdose.jpg');
     background-position: -250px -400px; */
     width: 100%;
-    height: 180px;
+    height: 150px;
     position: relative;
     top:-55px;
     padding: 50px 0;
@@ -43,12 +43,12 @@ header {
     background: linear-gradient(to bottom,  @azul 0%,@azulbebe 22%,@azulbebe 22%,@azulbebe 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@azul', endColorstr='@azulbebe',GradientType=0 ); /* IE6-9 */
     position: relative;
-    top:-52px;
+    top:-40px;
     height: 80vh;
 }
 #placarEmpates {
     position: relative;
-    top:-40px;
+    top:-30px;
     h6 {
         margin-top: 20px;
         color:darkslategray;
@@ -104,9 +104,6 @@ header {
             padding: 2px 5px;
             margin-top:-15px;
             position: relative;
-            &.badge {
-                width: 100px;
-            }
         }
         #usuario {
             background-color: black;
@@ -226,62 +223,4 @@ header {
 #vitorias, #derrotas, #empates {
     float: left;
     width: 33%;
-}
-
-// RESPONSIVO
-@media screen and (max-width: 520px) {
-    header {
-        height: 120px;
-        h1 {
-            font-size: 50px;
-        }
-        h5 {
-            margin: 10px auto 30px;
-        }
-    }
-    .placar {
-        .pontos {
-            width: 100px;
-            top:-20px;
-            #usr-pontos, #pc-pontos {
-                font-size: 40px;
-            }
-        }
-        .perfil {
-            margin: -25px 48px 0;
-            .avatar {
-                &#avatarPC, &#avatarUsr {
-                    width: 80px;
-                    height: 80px;
-                    background-size: 80px 80px;
-                }
-            }
-            .badge {
-                font-size: 12px;
-            }
-        }
-    }
-    .resultado {
-        width: 300px;
-        font-size: 15px;
-    }
-    .escolhas {
-        width: 300px;
-        #papel, #pedra, #tesoura {  
-            margin: 0 5px;
-            width: 80px;
-            height: 80px;
-            background-size: 80px 80px;
-        }
-        .crack, .lsd, .heroina {
-            h6{
-                margin: 100px 0 4px;
-            }
-        }
-        .vitorias, .empates, .derrotas {
-            h6 {
-                margin: 2px 0;
-            }
-        }
-    }
 }
