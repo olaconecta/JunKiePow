@@ -108,6 +108,7 @@ function vitoria(escolha, pc) {
         document.write(
         '<h1>VITÓOOOOOORIAAAAAAAA!!!!!!!!</h1>'
         );
+        location.reload();
     }
     // let divEscolha = document.getElementById(escolha);
     switch (escolha) {
@@ -135,6 +136,7 @@ function derrota(escolha, pc) {
     placarPC.innerHTML = pcPontos;
     if (pcPontos === 10) {
         document.write('<h1>VOCÊ PERDEU SEU LIXO</h1>');
+        location.reload();
     }
     // let divEscolha = document.getElementById("escolha");
     switch (pc) {
