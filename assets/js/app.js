@@ -74,24 +74,31 @@ function escolheJogadorPC () {
     switch(playerPC[escolhePlayerPC]) {
         case "Pete Doherty": 
         avatarPC.classList.add('doherty');
+        badgePC.classList.add('dohertyb');
         break;
         case "Rafael Pilha": 
         avatarPC.classList.add('ilha');
+        badgePC.classList.add('ilhab');
         break;
         case "Fábio Assunção": 
         avatarPC.classList.add('assuncao');
+        badgePC.classList.add('assuncaob');
         break;
         case "Casagrande": 
         avatarPC.classList.add('casagrande');
+        badgePC.classList.add('casagrandeb');
         break;
         case "Lindsay Lohan": 
         avatarPC.classList.add('lohan');
+        badgePC.classList.add('lohanb');
         break;
         case "Amy Winehouse": 
         avatarPC.classList.add('amy');
+        badgePC.classList.add('amyb');
         break;
         case "Maradona": 
         avatarPC.classList.add('maradona');
+        badgePC.classList.add('maradonab');
         break;
     }
 }

@@ -99,12 +99,13 @@ header {
             &#avatarUsr {
                 // background: url('../img/avatar/ilha.jpg');
                 // background-size: 100px 100px;
-                background: darken(@azul, 15%);
-                border: 3px solid black;
+                // background: darken(@azul, 15%);
+                background: darken(#666, 15%);
+                border: 5px solid black;
             }
             &#avatarPC {                
                 background-size: 100px 100px;
-                border: 3px solid white;
+                border: 5px solid white;
             }
         }
         #usuario, #pc {
@@ -121,8 +122,7 @@ header {
             color: white;       
         }
         #pc {        
-            background-color: white;
-            /* border: 1px solid green; */
+            background-color: white;            
             color: black;   
             
         }
@@ -133,24 +133,59 @@ header {
 ///////////
 .doherty {
     background: url('../img/avatar/doherty.jpg');    
+    border-color: green!important;
+}
+.dohertyb {
+    background-color: green!important;
+    color: white!important;
 }
 .ilha {    
     background: url('../img/avatar/ilha.jpg');
+    border-color: darkgoldenrod!important;
+}
+.ilhab {    
+    background-color: darkgoldenrod!important;
+    color: white!important;
 }
 .assuncao {    
     background: url('../img/avatar/assuncao.jpeg');
+    border-color: blue!important;
+}
+.assuncaob {
+    background-color: blue!important;
+    color: white!important;
 }
 .casagrande {    
     background: url('../img/avatar/casagrande.jpg');
+    border-color: orangered!important;
 }
+.casagrandeb {
+    background-color: orangered!important;
+    color: white!important;
+}    
 .lohan {    
     background: url('../img/avatar/lindsay.jpg');
+    border-color: fuchsia!important;
 }
+.lohanb { 
+    background-color: fuchsia!important;
+    color: white!important;
+   }
 .amy {    
     background: url('../img/avatar/amy.jpg');
+    border-color: purple!important;
+}
+.amyb {    
+    background-color: purple!important;
+    color: white!important;
 }
 .maradona {    
     background: url('../img/avatar/maradona.jpg');
+    border-color: aqua;
+}
+.maradonab {    
+    background-color: aqua;
+    color: black;
 }
 
 .resultado {
@@ -205,7 +240,7 @@ header {
     }
 }
 #papel:hover, #pedra:hover, #tesoura:hover { 
-    outline: .3px dotted lightcoral;    
+    outline: .3px dotted lightcoral;       
  }
 #pedra {    
     background:url('../img/crack.png');    
