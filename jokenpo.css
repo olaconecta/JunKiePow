@@ -1,0 +1,241 @@
+body {
+    font-family: arial;
+    text-align: center;
+    /* width: 800px;     */
+}
+header {
+    background: url('img/drogas.jpg');
+    background-position: 0px -120px;
+    /* background: url('img/overdose.jpg');
+    background-position: -250px -400px; */
+    width: 100%;
+    height: 150px;
+    position: relative;
+    top:-55px;
+    padding: 50px 0;
+    
+}
+header h5 {
+    color: white;
+    text-shadow: 1px 1px 3px brown;
+    margin: -10px auto 30px;
+    font-weight: 300;
+    -webkit-text-stroke: .1px gray;
+}
+header h1 {
+    color: red;
+    text-shadow: 0px 0px 17px brown;
+    -webkit-text-stroke: 1px darkred;
+    font-size:92px;
+    margin: 25px 0 0;
+    transform: skewY(-4deg);        
+    font-family: 'Flavors', cursive;    
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+.jogo {
+    background-color: lightblue;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#1e5799+0,7db9e8+100 */
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#1e5799+0,7db9e8+22,7db9e8+22,7db9e8+100 */
+    background: lightblue; /* Old browsers */
+    background: -moz-linear-gradient(top,  #1e5799 0%, lightblue 22%, lightblue 22%, lightblue 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #1e5799 0%,lightblue 22%,lightblue 22%,lightblue 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #1e5799 0%,lightblue 22%,lightblue 22%,lightblue 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='lightblue',GradientType=0 ); /* IE6-9 */
+
+    position: relative;
+    top:-40px;
+    height: 80vh;
+}
+#placarEmpates {
+    position: relative;
+    top:-30px;
+
+}
+#placarEmpates h6 {
+    margin-top: 20px;
+    color:darkslategray;
+    font-weight: 300;
+}
+
+.placar {  
+    position: relative;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: -10px;
+    font-family: 'Bungee Inline', cursive;
+    width: 100%;
+}
+.pontos {
+    width: 150px;
+    position: absolute;
+    top:-50px;
+    background-color: #222;
+    border-radius: 7px;
+    border: 5px ridge black;
+    /* X do placar */
+    font-size:23px;
+    color: yellow;
+    font-weight: 300;
+}
+
+#usr-pontos, #pc-pontos {
+    font-weight: 100;
+    font-size: 82px;
+}
+.perfil {
+    text-align: center;
+    margin: -55px 120px 0;
+    position: relative;
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: relative;
+    margin: 0 auto;
+}
+
+#avatarUsr {
+    background: url('img/avatar/ilha.jpg');
+    background-size: 100px 100px;
+    border: 3px solid black;
+}
+#avatarPC {
+    
+    background-size: 100px 100px;
+    border: 3px solid white;
+}
+.doherty {
+    background: url('img/avatar/doherty.jpg');    
+}
+.ilha {    
+    background: url('img/avatar/ilha.jpg');
+}
+.assuncao {    
+    background: url('img/avatar/assuncao.jpeg');
+}
+.casagrande {    
+    background: url('img/avatar/casagrande.jpg');
+}
+.lohan {    
+    background: url('img/avatar/lindsay.jpg');
+}
+.amy {    
+    background: url('img/avatar/amy.jpg');
+}
+.maradona {    
+    background: url('img/avatar/maradona.jpg');
+}
+#usuario, #pc {
+    width: auto;
+    padding: 2px 5px;
+    margin-top:-15px;
+    position: relative;
+}
+#usuario {
+    background-color: black;
+    color: white;       
+}
+#pc {        
+    background-color: white;
+    /* border: 1px solid green; */
+    color: black;   
+    
+}
+h3.resultado {
+    position: relative;
+    font-size: 21px;
+    height: 50px;
+    width: 500px;
+    padding: 10px 5px;
+    margin: 0 auto;
+    top:-35px;    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;    
+    font-family: 'Margarine', cursive;
+    
+    letter-spacing:1px ;
+    color: darkslategrey;
+    font-weight: 300;
+    background-color: rgba(224, 255, 255, .5);
+    border-radius: 7px;
+}
+
+.escolhas {
+    position: relative;
+    z-index: 10;
+    width: 510px;
+    height: auto;
+    margin: -20px auto 70px; 
+    background-color: rgba(224, 255, 255, .2);
+    padding: 10px 0;    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.escolhas .vitorias h6, .escolhas .empates h6, .escolhas .derrotas h6 {
+    margin: 5px auto;
+    font-weight: 300;
+    text-decoration: ;
+}
+#papel, #pedra, #tesoura {  
+    float: left;
+    text-align: center;
+    margin: 0 15px;
+    width: 120px;
+    height: 120px;
+    /* border-radius:50%; */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bolder;
+}
+.crack h6, .lsd h6, .heroina h6 {
+    margin: 130px 0 4px;
+}
+#papel:hover, #pedra:hover, #tesoura:hover { 
+    outline: .3px dotted lightcoral;
+    /* transition: all ease-in-out .2; */
+ }
+#pedra {
+    /* color:black;
+    border: 7px ridge burlywood; */
+    background:url('img/crack.png');    
+}
+#papel {
+    /* color:black;
+    border: 7px ridge yellow;     */
+    background:url('img/lsd.png');
+}
+#tesoura {
+    /* color:white;
+    border: 7px ridge orangered;
+    background-color: gray;   */
+    background:url('img/heroina.png');
+}
+#mensagem {
+    margin-top: 60px;
+}
+.vitoria {
+    color: green;
+    border: 1px green solid;
+}
+.empate {
+    border: 1px blue solid;
+    color: blue;
+}
+.derrota {
+    border: 1px red solid;
+    color: red;
+}
+#vitorias, #derrotas, #empates {
+    float: left;
+    width: 33%;
+}
