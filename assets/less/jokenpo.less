@@ -7,9 +7,7 @@ body {
 header {
     box-shadow: inset 0px -17px 10px @shinyred;
     background: url('../img/drogas.jpg');
-    background-position: 0px -120px;
-    /* background: url('../img/overdose.jpg');
-    background-position: -250px -400px; */
+    background-position: 0px -120px;        
     width: 100%;
     height: 180px;
     position: relative;
@@ -33,6 +31,14 @@ header {
         text-transform: uppercase;
         font-weight: bolder;
     }
+}
+.vitoriaUsr {
+    background: url('../img/overdose.jpg');
+    background-position: -250px -400px;
+}
+.vitoriaPc {
+    background: url('../img/capa.jpg');
+    background-position: 290px -120px;
 }
 .jogo {
     background-color: @azulbebe;
@@ -91,8 +97,9 @@ header {
             position: relative;
             margin: 0 auto;
             &#avatarUsr {
-                background: url('../img/avatar/ilha.jpg');
-                background-size: 100px 100px;
+                // background: url('../img/avatar/ilha.jpg');
+                // background-size: 100px 100px;
+                background: darken(@azul, 15%);
                 border: 3px solid black;
             }
             &#avatarPC {                
@@ -106,7 +113,7 @@ header {
             margin-top:-15px;
             position: relative;
             &.badge {
-                width: 100px;
+                width: 114px;
             }
         }
         #usuario {
@@ -249,7 +256,7 @@ header {
             }
         }
         .perfil {
-            margin: -25px 48px 0;
+            margin: -25px 55px 0;
             .avatar {
                 &#avatarPC, &#avatarUsr {
                     width: 80px;
@@ -257,8 +264,11 @@ header {
                     background-size: 80px 80px;
                 }
             }
-            .badge {
-                font-size: 12px;
+            #usuario, #pc {
+                &.badge {
+                    font-size: 12px;
+                    width: 90px;
+                }
             }
         }
     }

@@ -19,6 +19,7 @@ const votoVitTes = document.querySelector(".vitorias > .vt");
 const votoEmpTes = document.querySelector(".empates > .ept");
 const votoDerTes = document.querySelector(".derrotas > .dt");
 var mensagemResultado = document.querySelector("header > h1");
+var imgHeader = document.getElementById("cabecalho");
 // PLAYERS     
 // Peter Dorherty, Rafael Pilha, Fábio Assunção, Casagrande, Lindsay Logan, Amy Winehouse
 // const placarEmpPed = document.getElementsByClassName("ep");
@@ -107,11 +108,13 @@ function vitoria(escolha, pc) {
     placarUsr.innerHTML = usrPontos;
     if (usrPontos === 10) {
         mensagemResultado.innerHTML = "VITÓRIAAAAAA!!!!!";
+        
         // document.write(
         // '<h1>VITÓOOOOOORIAAAAAAAA!!!!!!!!</h1>'
         // );
         // setTimeout(location.reload(), 3000);
-        setTimeout( () => location.reload(), 3000);
+        imgHeader.classList.add("vitoriaUsr");
+        setTimeout( () => location.reload(), 5000);        
     }
     // let divEscolha = document.getElementById(escolha);
     switch (escolha) {
@@ -139,7 +142,8 @@ function derrota(escolha, pc) {
     placarPC.innerHTML = pcPontos;
     if (pcPontos === 10) {
         mensagemResultado.innerHTML = "VOCÊ PERDEU SEU LIXO";
-        setTimeout( () => location.reload(), 3000);
+        imgHeader.classList.add("vitoriaPc");        
+        setTimeout( () => location.reload(), 5000);
     }
     // let divEscolha = document.getElementById("escolha");
     switch (pc) {
