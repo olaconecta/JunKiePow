@@ -20,6 +20,8 @@ const votoEmpTes = document.querySelector(".empates > .ept");
 const votoDerTes = document.querySelector(".derrotas > .dt");
 var mensagemResultado = document.querySelector("header > h1");
 var imgHeader = document.getElementById("cabecalho");
+var badgeUsr = document.getElementById("usuario");
+ var avatarUsr = document.getElementById("avatarUsr");
 // PLAYERS     
 // Peter Dorherty, Rafael Pilha, Fábio Assunção, Casagrande, Lindsay Logan, Amy Winehouse
 // const placarEmpPed = document.getElementsByClassName("ep");
@@ -58,13 +60,23 @@ var contaEmpate =
     }
  ;
  //FUNÇÕES
- function nomeJogador() {
-     badgeUsr = document.getElementById("usuario");
-     nomeUsr = document.getElementById("nomeJogador").value;
-     document.sessionStorage.setItem(badgeUsr, nomeUsr);
-    badgeUsr.innerHTML = window.sessionStorage.getItem(nomeUsr); 
-}
 
+ 
+ function processUser()
+  {
+    var parameters = location.search.substring(1).split("&");
+
+    var temp = parameters[0].split("=");
+    l = unescape(temp[1]);
+    temp = parameters[1].split("=");
+    fotoUsr = unescape(temp[1]);
+    badgeUsr.innerHTML = l;
+    // avatarUsr.classList.add(addfotoUsr);    
+}
+processUser();
+if (l.length == 0) {
+    badgeUsr.innerHTML = "Usuário de Droga";
+}
 function escolheJogadorPC () {
     var badgePC = document.getElementById("pc");
     var avatarPC = document.getElementById("avatarPC");
@@ -102,6 +114,7 @@ function escolheJogadorPC () {
         break;
     }
 }
+
 escolheJogadorPC ();
 
 function escolhaPC() {

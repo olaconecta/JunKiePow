@@ -35,10 +35,14 @@ header {
 .vitoriaUsr {
     background: url('../img/overdose.jpg');
     background-position: -250px -400px;
+    box-shadow: inset 0px -17px 10px greenyellow;
+    color:greenyellow!important;
 }
 .vitoriaPc {
+    color:@darkred!important;
     background: url('../img/capa.jpg');
     background-position: 290px -120px;
+    box-shadow: inset 0px -17px 10px @darkred
 }
 .jogo {
     background-color: @azulbebe;
@@ -57,7 +61,7 @@ header {
     position: relative;
     top:-40px;
     h6 {
-        margin-top: 20px;
+        margin-top: 30px;
         color:darkslategray;
         font-weight: 300;
     }
@@ -97,10 +101,10 @@ header {
             position: relative;
             margin: 0 auto;
             &#avatarUsr {
-                // background: url('../img/avatar/ilha.jpg');
-                // background-size: 100px 100px;
+                background: url('../img/avatar/avatar-padrao.png');
+                background-size: 100px 100px;
                 // background: darken(@azul, 15%);
-                background: darken(#666, 15%);
+                // background: darken(#666, 15%);
                 border: 5px solid black;
             }
             &#avatarPC {                
@@ -211,7 +215,7 @@ header {
     z-index: 10;
     width: 510px;
     height: auto;
-    margin: -20px auto 70px; 
+    margin: -20px auto 40px; 
     background-color: rgba(224, 255, 255, .2);
     padding: 10px 0;    
     .centraliza;
@@ -269,6 +273,27 @@ header {
 #vitorias, #derrotas, #empates {
     float: left;
     width: 33%;
+}
+/////////
+// LOGIN
+/////////
+.login {
+    margin: 0 auto 20px;
+    position: relative;
+    width: 310px;
+    top:-10px;
+    padding: 10px 15px 15px;
+    .centraliza;
+    background: snow;
+    form {
+        font-size: 14px;
+        text-align: left;
+    }
+}
+
+.brave {
+    width: 310px;
+    font-size: 12px;
 }
 
 // RESPONSIVO

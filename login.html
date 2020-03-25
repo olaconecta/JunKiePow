@@ -11,15 +11,28 @@
 <body marginheight='0' marginwidth='0'>
     <header>
         <h1>¡Jun Kie Pow!</h1>
-        <h5>Escolha seu drogado</h5>
+        <h5>Crie seu usuário de drogas</h5>
     </header>
     <section class="jogo">
         <div class="login">
-            <input type="text" id="nomeJogador" name="nomeJogador" maxlength="15">
-            <!-- <input type="submit" name="escolher nome"> -->
-            <a id="btJogar" class="" href="index.html" onClick="nomeJogador()">
-                JOGAR
-            </a>
+            <form action="index.html" method="GET" name="parameters">                
+                <label>
+                    Escolha seu nome de usuário de drogas:
+                    <input type="text" id="nomeJogador" name="nomeJogador" maxlength="15" autofocus>
+                </label>
+                <br>
+                <br>
+                <label>
+                    Escolha sua foto:
+                    <input type="file" id="fotoJogador" name="fotoJogador">
+                </label>
+                <br>
+                <br>
+                <input type="submit" name="submit">
+                <!-- <a id="btJogar" class="" href="index.html" onClick="nomeJogador()">
+                    JOGAR
+                </a> -->
+            </form>
         </div>
     </section>
     <script src="assets/js/app.js" charset="utf-8"></script>
