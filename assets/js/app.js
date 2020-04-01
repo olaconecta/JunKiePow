@@ -100,8 +100,6 @@ if (nomeUsr.length == 0) {
 if (fotoUsr == undefined) {
     avatarUsr.classList.add('padrao');
 }
-
- 
 function escolheJogadorPC () {
     var badgePC = document.getElementById("pc");
     var avatarPC = document.getElementById("avatarPC");
@@ -152,13 +150,11 @@ function vitoria(escolha, pc) {
     usrPontos++;
     placarUsr.innerHTML = usrPontos;
     if (usrPontos === 10) {
-        mensagemResultado.innerHTML = "VITÓRIAAAAAA!!!!!";
-        
-        // document.write(
-        // '<h1>VITÓOOOOOORIAAAAAAAA!!!!!!!!</h1>'
-        // );
-        // setTimeout(location.reload(), 3000);
+        mensagemResultado.innerHTML = "VITÓRIAAAAAA!!!!!";                
         imgHeader.classList.add("vitoriaUsr");
+        pedra.classList.add("stop");
+        papel.classList.add("stop");
+        tesoura.classList.add("stop");
         setTimeout( () => location.reload(), 5000);        
     }
     // let divEscolha = document.getElementById(escolha);
@@ -188,6 +184,9 @@ function derrota(escolha, pc) {
     if (pcPontos === 10) {
         mensagemResultado.innerHTML = "VOCÊ PERDEU SEU LIXO";
         imgHeader.classList.add("vitoriaPc");        
+        pedra.classList.add("stop");
+        papel.classList.add("stop");
+        tesoura.classList.add("stop");
         setTimeout( () => location.reload(), 5000);
     }
     // let divEscolha = document.getElementById("escolha");
