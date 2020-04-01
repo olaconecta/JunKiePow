@@ -67,16 +67,41 @@ var contaEmpate =
     var parameters = location.search.substring(1).split("&");
 
     var temp = parameters[0].split("=");
-    l = unescape(temp[1]);
+    nomeUsr = unescape(temp[1]);
     temp = parameters[1].split("=");
-    fotoUsr = unescape(temp[1]);
-    badgeUsr.innerHTML = l;
-    // avatarUsr.classList.add(addfotoUsr);    
+    fotoUsr = unescape(temp[1]);    
+    switch (fotoUsr) {
+        case "1":
+        // avatarUsr.style.background = `url("assets/img/avatar/assuncao.jpeg")`;    
+        avatarUsr.classList.add('drogado1');    
+        break;
+        case "2":
+        avatarUsr.classList.add('drogado2');            
+        break;
+        case "3":
+        avatarUsr.classList.add('drogado3');                    
+        break;
+        case "4":
+        avatarUsr.classList.add('drogado4');                    
+        break;
+        case "5":
+        avatarUsr.classList.add('nascimento');                    
+        break;
+        case "6":
+        avatarUsr.classList.add('magali');                    
+        break;
+    }
+    badgeUsr.innerHTML = nomeUsr;
 }
 processUser();
-if (l.length == 0) {
+if (nomeUsr.length == 0) {
     badgeUsr.innerHTML = "Usuário de Droga";
 }
+if (fotoUsr == undefined) {
+    avatarUsr.classList.add('padrao');
+}
+
+ 
 function escolheJogadorPC () {
     var badgePC = document.getElementById("pc");
     var avatarPC = document.getElementById("avatarPC");
@@ -260,7 +285,5 @@ function principal() {
     // papel.addEventListener('click', () => jogo('Papel'));
     // tesoura.addEventListener('click', () => jogo('Tesoura'));
 }
-
-
 
 principal();

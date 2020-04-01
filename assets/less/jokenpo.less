@@ -100,8 +100,8 @@ header {
             border-radius: 50%;
             position: relative;
             margin: 0 auto;
-            &#avatarUsr {
-                background: url('../img/avatar/avatar-padrao.png');
+            &#avatarUsr {             
+                //  background: url('../img/avatar/avatar-padrao.png');   
                 background-size: 100px 100px;
                 // background: darken(@azul, 15%);
                 // background: darken(#666, 15%);
@@ -118,7 +118,7 @@ header {
             margin-top:-15px;
             position: relative;
             &.badge {
-                width: 114px;
+                width: 125px;
             }
         }
         #usuario {
@@ -190,6 +190,28 @@ header {
 .maradonab {    
     background-color: aqua;
     color: black;
+}
+
+.drogado1 {
+    background: url('../img/avatar/drogado1.png');
+}
+.drogado2 {
+    background: url('../img/avatar/drogado2.jpeg');
+}
+.drogado3 {
+    background: url('../img/avatar/drogado3.jpeg');
+}
+.drogado4 {
+    background: url('../img/avatar/drogado4.jpg');
+}
+.nascimento {
+    background: url('../img/avatar/nascimento.jpg');
+}
+.magali {
+    background: url('../img/avatar/magali.jpg');
+}
+.padrao {
+    background: url('../img/avatar/avatar-padrao.png');
 }
 
 .resultado {
@@ -281,13 +303,73 @@ header {
     margin: 0 auto 20px;
     position: relative;
     width: 310px;
-    top:-10px;
-    padding: 10px 15px 15px;
+    top:-50px;
+    padding: 20px 15px 15px;
     .centraliza;
     background: snow;
     form {
+        font-family: 'Bungee Inline', cursive;
         font-size: 14px;
-        text-align: left;
+        text-align: left;        
+        .pega-nome {
+            margin: 15px auto;            
+            input {
+                margin: 5px auto;
+                width: 99%;
+                height: 30px;
+                border: 1px solid @red;
+            }
+        }
+        .pega-avatar {            
+            margin: 5px auto;
+            display: inline-block;
+            // .centraliza;            
+            text-align: center;
+            label {
+                float:left;
+                margin: 10px 14px;            
+                img {
+                    width: 75px;
+                    height: auto;
+                    border-radius: 50%;                    
+                    // position: relative;
+                    // z-index: 5;
+                }                
+                // input[type="radio"] {
+                //     position: relative;
+                //     z-index:1;
+                //     width: 80px;
+                //     height: 80px;
+                //     top:-84px
+
+                // }
+
+            }
+        }
+        .envia {
+            margin: 15px auto;            
+            input {
+                background-color: @darkred;
+                color:@white;
+                border: none;
+                font-size: 16px;
+                display: block;
+                width: 100%;   
+                padding: 15px;   
+                font-family: 'Flavors', cursive;    
+                font-size: 28px;
+                letter-spacing: 2px;      
+                cursor: pointer;
+                &:hover {
+                    background-color: @shinyred;
+                    color: @azulbebe;
+                }
+                &:active {
+                    background-color: @azulbebe;
+                    color: @red;
+                }
+            }
+        }
     }
 }
 

@@ -16,22 +16,49 @@
     <section class="jogo">
         <div class="login">
             <form action="junkiepow.html" method="GET" name="parameters">                
-                <label>
+                <label class="pega-nome">
                     Escolha seu nome de usuário de drogas:
-                    <input type="text" id="nomeJogador" name="nomeJogador" maxlength="15" autofocus>
+                    <input type="text" id="nomeJogador" name="nomeJogador" maxlength="14" autofocus>
+                </label>    
+                <br>            
+                <br>            
+                <label>
+                    Escolha seu personage:
+                    <!-- <select type="" id="fotoJogador" name="fotoJogador">                
+                        <option>1</option>
+                        <option>2</option>                        
+                        <option>3</option>                        
+                    </select> -->
                 </label>
-                <br>
-                <br>
-                <!-- <label>
-                    Escolha sua foto:
-                    <input type="file" id="fotoJogador" name="fotoJogador">
-                </label>
-                <br>
-                <br> -->
-                <input type="submit" name="submit">
-                <!-- <a id="btJogar" class="" href="index.html" onClick="nomeJogador()">
-                    JOGAR
-                </a> -->
+                <div class="pega-avatar">
+                    <label>
+                        <img src="assets/img/avatar/drogado1.png"><br>
+                        <input type="radio" name="escolheFoto"  value="1">
+                    </label>
+                    <label>
+                        <img src="assets/img/avatar/drogado2.jpeg"><br>
+                        <input type="radio" name="escolheFoto" value="2">
+                    </label>
+                    <label>
+                        <img src="assets/img/avatar/drogado3.jpeg"><br>
+                        <input type="radio" name="escolheFoto" value="3">
+                    </label>
+                    <label>
+                        <img src="assets/img/avatar/drogado4.jpg"><br>
+                        <input type="radio" name="escolheFoto" value="4">
+                    </label>
+                    <label>
+                        <img src="assets/img/avatar/nascimento.jpg"><br>
+                        <input type="radio" name="escolheFoto" value="5">
+                    </label>
+                    <label>
+                        <img src="assets/img/avatar/magali.jpg"><br>
+                        <input type="radio" name="escolheFoto" value="6">
+                    </label>
+                </div>
+                <label class="envia">
+                    <input type="submit" name="submit" value="JOGAR!">                
+                </label>                
             </form>
         </div>
         <div class="centraliza">
@@ -40,6 +67,6 @@
             </div>
         </div>
     </section>
-    <script src="assets/js/app.js" charset="utf-8"></script>
+    <script src="assets/js/app.js" charset="utf-8"></script>    
 </body>
 </html>
