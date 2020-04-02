@@ -11,70 +11,57 @@
 <body marginheight='0' marginwidth='0'>
     <header>
         <h1>¡Jun Kie Pow!</h1>
-        <h5>Melhor de 10</h5>
+        <h5>Crie seu usuário de drogas</h5>
     </header>
-    <section class="jogo">        
-        <div class="placar">
-            <div class="perfil" id="perfilUsr">
-                <div class="avatar" id="avatarUsr"></div>
-                <div id="usuario" class="badge">Usuário</div>
-            </div>
-            <div class="pontos">
-                <span id="usr-pontos">0</span> X <span id="pc-pontos">0</span>
-            </div>
-            <div class="perfil" id="perfilPC">
-                <div class="avatar" id="avatarPC"></div>
-                <div id="pc" class="badge">PC</div>
-            </div>
-        </div>
-        <div id="placarEmpates">
-            <h6>empates: 0</h6>
-        </div>
-        <div >
-            <h3 class="resultado">Escolha sua brisa:</h3>
-        </div>
-        <div class="escolhas">
-            <div class="crack">                
-                <div id="pedra" class="escolha"></div>
-                <h6>CRACK <span id="votoPedra"></span> </h6>
-                <div class="vitorias">        
-                    <h6 class="vp">vitórias: 0</h6>
-                </div>   
-                <div class="empates">    
-                    <h6 class="ep">empates: 0</h6>
-                </div>   
-                <div class="derrotas">        
-                    <h6 class="dpa">derrotas: 0</h6>
-                </div>             
-            </div>
-            <div class="lsd">
-                <div id="papel" class="escolha"></div>
-                <h6>LSD <span id="votoPapel"></span></h6>
-                <div class="vitorias">        
-                    <h6 class="vpa">vitórias: 0</h6>
-                </div>   
-                <div class="empates">    
-                    <h6 class="epa">empates: 0</h6>
-                </div>   
-                <div class="derrotas">        
-                    <h6 class="dt">derrotas: 0</h6>
+    <section class="jogo">
+        <div class="login">
+            <form action="junkiepow.html" method="GET" name="parameters">                
+                <label class="pega-nome">
+                    Digite seu nome de usuário:
+                    <input type="text" id="nomeJogador" name="nomeJogador" maxlength="14" autofocus>
+                </label>    
+                <br>            
+                <br>            
+                <label>
+                    Escolha seu indivíduo:                    
+                </label>
+                <div class="pega-avatar">
+                    <label>
+                        <img src="assets/img/avatar/drogado1.png"><br>
+                        <input type="radio" name="escolheFoto"  value="1">
+                    </label>
+                    <label>
+                        <img src="assets/img/avatar/drogado2.jpeg"><br>
+                        <input type="radio" name="escolheFoto" value="2">
+                    </label>
+                    <label>
+                        <img src="assets/img/avatar/drogado3.jpeg"><br>
+                        <input type="radio" name="escolheFoto" value="3">
+                    </label>
+                    <label>
+                        <img src="assets/img/avatar/drogado4.jpg"><br>
+                        <input type="radio" name="escolheFoto" value="4">
+                    </label>
+                    <label>
+                        <img src="assets/img/avatar/nascimento.jpg"><br>
+                        <input type="radio" name="escolheFoto" value="5">
+                    </label>
+                    <label>
+                        <img src="assets/img/avatar/magali.jpg"><br>
+                        <input type="radio" name="escolheFoto" value="6">
+                    </label>
                 </div>
+                <label class="envia">
+                    <input type="submit" name="submit" value="JOGAR!">                
+                </label>                
+            </form>
+        </div>
+        <div class="centraliza">
+            <div class="brave">
+                Já conhece o navegador <a href="https://brave.com/ola634" target="_blank">Brave</a> ? Seguro, privado, rápido, bloqueia anúncios chatos e tem uma carteira de criptoativos no gatilho pra usar. <a href="https://brave.com/ola634" target="_blank">Baixe o Brave</a>.
             </div>
-            <div class="heroina">
-                <div id="tesoura" class="escolha"></div>                
-                <h6>HEROÍNA <span id="votoTesoura"></span></h6>
-                <div class="vitorias">        
-                    <h6 class="vt">vitórias: 0</h6>
-                </div>   
-                <div class="empates">    
-                    <h6 class="ept">empates: 0</h6>
-                </div>   
-                <div class="derrotas">        
-                    <h6 class="dp">derrotas: 0</h6>
-                </div>
-            </div>
-        </div>               
+        </div>
     </section>
-    <script src="assets/js/app.js" charset="utf-8"></script>
+    <script src="assets/js/app.js" charset="utf-8"></script>    
 </body>
 </html>

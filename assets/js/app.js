@@ -59,13 +59,12 @@ var contaEmpate =
         "contaTes" : 0,
     }
  ;
- //FUNÇÕES
-
+ const tela = document.getElementById("tela");        
+ const efeito = document.getElementById("efeito");        
  
- function processUser()
-  {
+ //FUNÇÕES
+ function processUser() {
     var parameters = location.search.substring(1).split("&");
-
     var temp = parameters[0].split("=");
     nomeUsr = unescape(temp[1]);
     temp = parameters[1].split("=");
@@ -105,8 +104,9 @@ function escolheJogadorPC () {
     var avatarPC = document.getElementById("avatarPC");
     const playerPC = ["Pete Doherty", "Rafael Pilha", "Fábio Assunção", "Casagrande", "Lindsay Lohan", "Amy Winehouse", "Maradona"]
     const escolhePlayerPC = Math.floor(Math.random(playerPC) * 7);
-    badgePC.innerHTML = playerPC[escolhePlayerPC];
-    switch(playerPC[escolhePlayerPC]) {
+    nomePc = playerPC[escolhePlayerPC];
+    badgePC.innerHTML = nomePc;
+    switch(nomePc) {
         case "Pete Doherty": 
         avatarPC.classList.add('doherty');
         badgePC.classList.add('dohertyb');
@@ -146,11 +146,42 @@ function escolhaPC() {
     return escolhaDoPC[escolhaRandom];     
 }
 
+function shakeCrack() {    
+    tela.classList.add("shake");            
+    setTimeout( () => tela.classList.remove("shake"), 1200);        
+    efeito.classList.add("shakecrack");            
+    setTimeout( () => efeito.classList.remove("shakecrack"), 1200);        
+ }
+ function shakeLsd() {  
+    tela.classList.add("shake");            
+    setTimeout( () => tela.classList.remove("shake"), 1200);          
+    efeito.classList.add("shakelsd");            
+    setTimeout( () => efeito.classList.remove("shakelsd"), 1200);        
+ }
+ function shakeHeroina() {    
+    tela.classList.add("shake");            
+    setTimeout( () => tela.classList.remove("shake"), 1200);        
+    efeito.classList.add("shakeheroina");            
+    setTimeout( () => efeito.classList.remove("shakeheroina"), 1200);        
+ }
+ function vitoriaCrack() {        
+    efeito.classList.add("vitoriacrack");            
+    setTimeout( () => efeito.classList.remove("vitoriacrack"), 700);        
+ }
+ function vitoriaLsd() {        
+    efeito.classList.add("vitorialsd");            
+    setTimeout( () => efeito.classList.remove("vitorialsd"), 700);        
+ }
+ function vitoriaHeroina() {        
+    efeito.classList.add("vitoriaheroina");            
+    setTimeout( () => efeito.classList.remove("vitoriaheroina"), 700);        
+ }
+
 function vitoria(escolha, pc) {
     usrPontos++;
-    placarUsr.innerHTML = usrPontos;
+    placarUsr.innerHTML = usrPontos;    
     if (usrPontos === 10) {
-        mensagemResultado.innerHTML = "VITÓRIAAAAAA!!!!!";                
+        mensagemResultado.innerHTML = "VITÓRIAAA!!! CHUPA " + nomePc;                
         imgHeader.classList.add("vitoriaUsr");
         pedra.classList.add("stop");
         papel.classList.add("stop");
@@ -160,19 +191,22 @@ function vitoria(escolha, pc) {
     // let divEscolha = document.getElementById(escolha);
     switch (escolha) {
         case "Crack":        
+        vitoriaCrack();
         contaPedra.contaVit++;
         votoVitPed.innerHTML = "vitórias: " + contaPedra.contaVit; 
-        resultado.innerHTML = escolha + " acelerou a brisa da " + pc + ". Vitória, chupa PC"; 
+        resultado.innerHTML = escolha + " acelerou a brisa da " + pc + ". <br>Chupa " + nomePc; 
         break;
         case "LSD":
+        vitoriaLsd();
         contaPapel.contaVit++;        
         votoVitPap.innerHTML = "vitórias: " + contaPapel.contaVit;
-        resultado.innerHTML = escolha + " cobriu alucinando a brisa do " + pc + ". Venceu, toma pc lento"; 
+        resultado.innerHTML = escolha + " cobriu alucinando a brisa do " + pc + ". <br>Toma " + nomePc; 
         break;
         case "Heroína":
+        vitoriaHeroina();
         contaTesoura.contaVit++;    
         votoVitTes.innerHTML = "vitórias: " + contaTesoura.contaVit;
-        resultado.innerHTML = escolha + " perfurou e derrubou a alucinação do " + pc + ". Você ganhou desse pc de merda"; 
+        resultado.innerHTML = escolha + " perfurou a alucinação do " + pc + ".<br>" + nomePc + " de merda"; 
         break;
     }    
     // divEscolha.classList.add("vitoria");
@@ -180,9 +214,9 @@ function vitoria(escolha, pc) {
 }
 function derrota(escolha, pc) {
     pcPontos++;
-    placarPC.innerHTML = pcPontos;
+    placarPC.innerHTML = pcPontos;               
     if (pcPontos === 10) {
-        mensagemResultado.innerHTML = "VOCÊ PERDEU SEU LIXO";
+        mensagemResultado.innerHTML = "VOCÊ PERDEU " + nomeUsr;
         imgHeader.classList.add("vitoriaPc");        
         pedra.classList.add("stop");
         papel.classList.add("stop");
@@ -191,21 +225,23 @@ function derrota(escolha, pc) {
     }
     // let divEscolha = document.getElementById("escolha");
     switch (pc) {
-        case "Crack":
-        resultado.innerHTML = escolha + " foi debulhada pela brisa estimulante do " + pc + ". Derrota, toma trouxa"; 
+        case "Crack":     
+        shakeCrack();      
+        resultado.innerHTML = escolha + " acelerou com estimulo do " + pc + ". <br>Toma " + nomeUsr; 
         contaPedra.contaDer++;
         votoDerPed.innerHTML = "derrotas: " + contaPedra.contaDer;    
         break;
         case "LSD":
-        resultado.innerHTML = escolha + " foi envolto pela alucinação do " + pc + ". Se fudeu"; 
+        shakeLsd();
+        resultado.innerHTML = escolha + " foi envolto pela alucinação do " + pc + ". <br>Se fudeu " + nomeUsr; 
         contaPapel.contaDer++;
         votoDerPap.innerHTML = "derrotas: " + contaPapel.contaDer;    
         break;
         case "Heroína":
+        shakeHeroina();
         contaTesoura.contaDer++;
         votoDerTes.innerHTML = "derrotas: " + contaTesoura.contaDer;
-        resultado.innerHTML = escolha + " foi perfurado pela brisa nocauteante da " + pc + ". Perdeu, otário"; 
-        
+        resultado.innerHTML = escolha + " foi perfurado pela brisa da " + pc + ". <br>" + nomeUsr + " otário";         
         break;
     }      
     // divEscolha.classList.add("derrota");

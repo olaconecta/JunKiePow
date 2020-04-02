@@ -4,5 +4,5 @@
   justify-content: center;
 }
 .anima {
-  transition: all ease-in-out 0.2;
+  transition: all 0.2 ease-in-out;
 }

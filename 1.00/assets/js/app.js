@@ -19,6 +19,9 @@ const votoVitTes = document.querySelector(".vitorias > .vt");
 const votoEmpTes = document.querySelector(".empates > .ept");
 const votoDerTes = document.querySelector(".derrotas > .dt");
 var mensagemResultado = document.querySelector("header > h1");
+var imgHeader = document.getElementById("cabecalho");
+var badgeUsr = document.getElementById("usuario");
+ var avatarUsr = document.getElementById("avatarUsr");
 // PLAYERS     
 // Peter Dorherty, Rafael Pilha, Fábio Assunção, Casagrande, Lindsay Logan, Amy Winehouse
 // const placarEmpPed = document.getElementsByClassName("ep");
@@ -56,14 +59,45 @@ var contaEmpate =
         "contaTes" : 0,
     }
  ;
+ const tela = document.getElementsByClassName("tela");        
+ 
  //FUNÇÕES
- function nomeJogador() {
-     badgeUsr = document.getElementById("usuario");
-     nomeUsr = document.getElementById("nomeJogador").value;
-     document.sessionStorage.setItem(badgeUsr, nomeUsr);
-    badgeUsr.innerHTML = window.sessionStorage.getItem(nomeUsr); 
+ function processUser() {
+    var parameters = location.search.substring(1).split("&");
+    var temp = parameters[0].split("=");
+    nomeUsr = unescape(temp[1]);
+    temp = parameters[1].split("=");
+    fotoUsr = unescape(temp[1]);    
+    switch (fotoUsr) {
+        case "1":
+        // avatarUsr.style.background = `url("assets/img/avatar/assuncao.jpeg")`;    
+        avatarUsr.classList.add('drogado1');    
+        break;
+        case "2":
+        avatarUsr.classList.add('drogado2');            
+        break;
+        case "3":
+        avatarUsr.classList.add('drogado3');                    
+        break;
+        case "4":
+        avatarUsr.classList.add('drogado4');                    
+        break;
+        case "5":
+        avatarUsr.classList.add('nascimento');                    
+        break;
+        case "6":
+        avatarUsr.classList.add('magali');                    
+        break;
+    }
+    badgeUsr.innerHTML = nomeUsr;
 }
-
+processUser();
+if (nomeUsr.length == 0) {
+    badgeUsr.innerHTML = "Usuário de Droga";
+}
+if (fotoUsr == undefined) {
+    avatarUsr.classList.add('padrao');
+}
 function escolheJogadorPC () {
     var badgePC = document.getElementById("pc");
     var avatarPC = document.getElementById("avatarPC");
@@ -73,27 +107,35 @@ function escolheJogadorPC () {
     switch(playerPC[escolhePlayerPC]) {
         case "Pete Doherty": 
         avatarPC.classList.add('doherty');
+        badgePC.classList.add('dohertyb');
         break;
         case "Rafael Pilha": 
         avatarPC.classList.add('ilha');
+        badgePC.classList.add('ilhab');
         break;
         case "Fábio Assunção": 
         avatarPC.classList.add('assuncao');
+        badgePC.classList.add('assuncaob');
         break;
         case "Casagrande": 
         avatarPC.classList.add('casagrande');
+        badgePC.classList.add('casagrandeb');
         break;
         case "Lindsay Lohan": 
         avatarPC.classList.add('lohan');
+        badgePC.classList.add('lohanb');
         break;
         case "Amy Winehouse": 
         avatarPC.classList.add('amy');
+        badgePC.classList.add('amyb');
         break;
         case "Maradona": 
         avatarPC.classList.add('maradona');
+        badgePC.classList.add('maradonab');
         break;
     }
 }
+
 escolheJogadorPC ();
 
 function escolhaPC() {
@@ -106,12 +148,12 @@ function vitoria(escolha, pc) {
     usrPontos++;
     placarUsr.innerHTML = usrPontos;
     if (usrPontos === 10) {
-        mensagemResultado.innerHTML = "VITÓRIAAAAAA!!!!!";
-        // document.write(
-        // '<h1>VITÓOOOOOORIAAAAAAAA!!!!!!!!</h1>'
-        // );
-        // setTimeout(location.reload(), 3000);
-        setTimeout( () => location.reload(), 3000);
+        mensagemResultado.innerHTML = "VITÓRIAAAAAA!!!!!";                
+        imgHeader.classList.add("vitoriaUsr");
+        pedra.classList.add("stop");
+        papel.classList.add("stop");
+        tesoura.classList.add("stop");
+        setTimeout( () => location.reload(), 5000);        
     }
     // let divEscolha = document.getElementById(escolha);
     switch (escolha) {
@@ -136,14 +178,20 @@ function vitoria(escolha, pc) {
 }
 function derrota(escolha, pc) {
     pcPontos++;
-    placarPC.innerHTML = pcPontos;
+    placarPC.innerHTML = pcPontos;         
+    tela.classList.add("shake");   
     if (pcPontos === 10) {
         mensagemResultado.innerHTML = "VOCÊ PERDEU SEU LIXO";
-        setTimeout( () => location.reload(), 3000);
+        imgHeader.classList.add("vitoriaPc");        
+        pedra.classList.add("stop");
+        papel.classList.add("stop");
+        tesoura.classList.add("stop");
+        setTimeout( () => location.reload(), 5000);
     }
     // let divEscolha = document.getElementById("escolha");
     switch (pc) {
-        case "Crack":
+        case "Crack":   
+        console.log(tela);                    
         resultado.innerHTML = escolha + " foi debulhada pela brisa estimulante do " + pc + ". Derrota, toma trouxa"; 
         contaPedra.contaDer++;
         votoDerPed.innerHTML = "derrotas: " + contaPedra.contaDer;    
@@ -236,7 +284,5 @@ function principal() {
     // papel.addEventListener('click', () => jogo('Papel'));
     // tesoura.addEventListener('click', () => jogo('Tesoura'));
 }
-
-
 
 principal();
