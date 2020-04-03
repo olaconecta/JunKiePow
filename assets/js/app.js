@@ -64,22 +64,25 @@ var contaEmpate =
  const efeito = document.getElementById("efeito");        
  
  //FUNÇÕES
+//  const btEnvia = document.getElementsByClassName("envia");
+//  const radioBt = document.querySelectorAll("input[radio]");
+//  btEnvia.disabled = true;
+
  function processUser() {
-    var parameters = location.search.substring(1).split("&");
-    var temp = parameters[0].split("=");
-    nomeUsr = unescape(temp[1]);
+     var parameters = location.search.substring(1).split("&");
+     var temp = parameters[0].split("=");
+     nomeUsr = unescape(temp[1]);     
     temp = parameters[1].split("=");
     fotoUsr = unescape(temp[1]);    
     switch (fotoUsr) {
-        case "1":
-        // avatarUsr.style.background = `url("assets/img/avatar/assuncao.jpeg")`;    
-        avatarUsr.classList.add('drogado1');    
+        case "1":    
+        avatarUsr.classList.add('drogado1');
         break;
         case "2":
-        avatarUsr.classList.add('drogado2');            
+        avatarUsr.classList.add('drogado2');        
         break;
         case "3":
-        avatarUsr.classList.add('drogado3');                    
+        avatarUsr.classList.add('drogado3');                            
         break;
         case "4":
         avatarUsr.classList.add('drogado4');                    
@@ -90,16 +93,30 @@ var contaEmpate =
         case "6":
         avatarUsr.classList.add('magali');                    
         break;
+        case "7":
+        avatarUsr.classList.add('cracudo');                    
+        break;
+        case "8":
+        avatarUsr.classList.add('bozo');                    
+        break;
+        case "9":
+        avatarUsr.classList.add('mae');                    
+        break;
+        case "" :
+        avatarUsr.classList.add('padrao');
+        break;
     }
-    badgeUsr.innerHTML = nomeUsr;
+    badgeUsr.innerHTML = nomeUsr;    
 }
 processUser();
+
 if (nomeUsr.length == 0) {
-    badgeUsr.innerHTML = "Usuário de Droga";
+    badgeUsr.innerHTML = "Usuário de Droga"; 
 }
-if (fotoUsr == undefined) {
+if (fotoUsr.length == 0) {
     avatarUsr.classList.add('padrao');
 }
+
 function escolheJogadorPC () {
     var badgePC = document.getElementById("pc");
     var avatarPC = document.getElementById("avatarPC");
@@ -212,7 +229,7 @@ function vitoria(escolha, pc) {
         vitoriaLsd();
         contaPapel.contaVit++;        
         votoVitPap.innerHTML = "vitórias: " + contaPapel.contaVit;
-        resultado.innerHTML = escolha + " cobriu alucinando a brisa do " + pc + ". <br>Toma " + nomePc; 
+        resultado.innerHTML = escolha + " alucinou a brisa do " + pc + ". <br>Toma " + nomePc; 
         break;
         case "Heroína":
         vitoriaHeroina();

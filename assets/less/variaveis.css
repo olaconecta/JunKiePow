@@ -24,11 +24,11 @@
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#26428e+0,11123f+100 */
   background: #26428e;
   /* Old browsers */
-  background: -moz-radial-gradient(center, ellipse cover, #26428e 0%, #11123f 100%);
+  background: -moz-radial-gradient(center, ellipse cover, #26428e 0%, purple 50%, #11123f 100%);
   /* FF3.6-15 */
-  background: -webkit-radial-gradient(center, ellipse cover, #26428e 0%, #11123f 100%);
+  background: -webkit-radial-gradient(center, ellipse cover, #26428e 0%, purple 50%, #11123f 100%);
   /* Chrome10-25,Safari5.1-6 */
-  background: radial-gradient(ellipse at center, #26428e 0%, #11123f 100%);
+  background: radial-gradient(ellipse at center, #26428e 0%, purple 50%, #11123f 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#26428e', endColorstr='#11123f', GradientType=1);
   /* IE6-9 fallback on horizontal gradient */

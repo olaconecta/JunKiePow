@@ -58,7 +58,7 @@ header {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@azul', endColorstr='@azulbebe',GradientType=0 ); /* IE6-9 */
     position: relative;
     top:-52px;
-    height: 80vh;
+    height: 100vh;
 }
 #placarEmpates {
     position: relative;
@@ -213,6 +213,15 @@ header {
 .magali {
     background: url('../img/avatar/magali.jpg');
 }
+.cracudo {
+    background: url('../img/avatar/cracudo.jpg');
+}
+.bozo {
+    background: url('../img/avatar/bozo.jpg');
+}
+.mae {
+    background: url('../img/avatar/mae.jpg');
+}
 .padrao {
     background: url('../img/avatar/avatar-padrao.png');
 }
@@ -320,7 +329,7 @@ header {
     margin: 0 auto 20px;
     position: relative;
     width: 310px;
-    top:-50px;
+    top:-75px;
     padding: 20px 15px 15px;
     .centraliza;
     background: snow;
@@ -345,7 +354,7 @@ header {
             label {
                 cursor: pointer;
                 float:left;
-                margin: 10px 11px;            
+                margin: 5px 11px;            
                 img {
                     width: 75px;
                     height: auto;
@@ -386,6 +395,11 @@ header {
                 &:active {
                     background-color: @azulbebe;
                     color: @red;
+                }
+                &:disabled {
+                    background-color: lightgray;
+                    color: @white;
+                    cursor: not-allowed;
                 }
             }
         }

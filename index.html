@@ -23,36 +23,49 @@
                 <br>            
                 <br>            
                 <label>
-                    Escolha seu indivíduo:                    
+                    Escolha seu indivíduo: *                    
                 </label>
                 <div class="pega-avatar">
-                    <label>
+                    <label onclick="habilita();">
                         <img src="assets/img/avatar/drogado1.png"><br>
                         <input type="radio" name="escolheFoto"  value="1">
                     </label>
-                    <label>
+                    <label onclick="habilita();">
                         <img src="assets/img/avatar/drogado2.jpeg"><br>
                         <input type="radio" name="escolheFoto" value="2">
                     </label>
-                    <label>
+                    <label onclick="habilita();">
                         <img src="assets/img/avatar/drogado3.jpeg"><br>
                         <input type="radio" name="escolheFoto" value="3">
                     </label>
-                    <label>
+                    <label onclick="habilita();">
                         <img src="assets/img/avatar/drogado4.jpg"><br>
                         <input type="radio" name="escolheFoto" value="4">
                     </label>
-                    <label>
+                    <label onclick="habilita();">
                         <img src="assets/img/avatar/nascimento.jpg"><br>
                         <input type="radio" name="escolheFoto" value="5">
                     </label>
-                    <label>
+                    <label onclick="habilita();">
                         <img src="assets/img/avatar/magali.jpg"><br>
                         <input type="radio" name="escolheFoto" value="6">
                     </label>
+                    <!-- novos players -->
+                    <label onclick="habilita();">
+                        <img src="assets/img/avatar/cracudo.jpg"><br>
+                        <input type="radio" name="escolheFoto" value="7">
+                    </label>
+                    <label onclick="habilita();">
+                        <img src="assets/img/avatar/bozo.jpg"><br>
+                        <input type="radio" name="escolheFoto" value="8">
+                    </label>
+                    <label onclick="habilita();">
+                        <img src="assets/img/avatar/mae.jpg"><br>
+                        <input type="radio" name="escolheFoto" value="9">
+                    </label>
                 </div>
                 <label class="envia">
-                    <input type="submit" name="submit" value="JOGAR!">                
+                    <input id="btEnvia" type="submit" name="submit" value="JOGAR!" >                
                 </label>                
             </form>
         </div>
@@ -63,5 +76,13 @@
         </div>
     </section>
     <script src="assets/js/app.js" charset="utf-8"></script>    
+    <script>
+        const btEnvia = document.getElementById("btEnvia");
+        btEnvia.disabled = true;  
+        const label = document.querySelectorAll(".pega-avatar > label");
+        function habilita() {
+            btEnvia.disabled = false;
+        }                
+    </script>
 </body>
 </html>
