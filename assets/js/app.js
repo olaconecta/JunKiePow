@@ -176,12 +176,16 @@ function shakeCrack() {
     efeito.classList.add("vitoriaheroina");            
     setTimeout( () => efeito.classList.remove("vitoriaheroina"), 700);        
  }
+ function empateBosta() {        
+    efeito.classList.add("empatebosta");            
+    setTimeout( () => efeito.classList.remove("empatebosta"), 500);        
+ }
 
 function vitoria(escolha, pc) {
     usrPontos++;
     placarUsr.innerHTML = usrPontos;    
     if (usrPontos === 10) {
-        mensagemResultado.innerHTML = "VITÓRIAAA!!! CHUPA " + nomePc;                
+        mensagemResultado.innerHTML = "CHUPA " + nomePc;                
         imgHeader.classList.add("vitoriaUsr");
         pedra.classList.add("stop");
         papel.classList.add("stop");
@@ -241,7 +245,7 @@ function derrota(escolha, pc) {
         shakeHeroina();
         contaTesoura.contaDer++;
         votoDerTes.innerHTML = "derrotas: " + contaTesoura.contaDer;
-        resultado.innerHTML = escolha + " foi perfurado pela brisa da " + pc + ". <br>" + nomeUsr + " otário";         
+        resultado.innerHTML = escolha + " foi perfurado pela brisa da " + pc + ". <br>Que bosta" + nomeUsr;         
         break;
     }      
     // divEscolha.classList.add("derrota");
@@ -249,6 +253,7 @@ function derrota(escolha, pc) {
 }
 function empate(escolha, pc) {
     contaEmpate.conta++;
+    empateBosta();
     placarEmp.innerHTML = "empates: " + contaEmpate.conta;
     // let divEscolha = document.getElementById(escolha);
     // resultado.innerHTML = escolha + " empata " + pc  + "<br>JOGO XOXO";
@@ -264,8 +269,8 @@ function empate(escolha, pc) {
         resultado.innerHTML = escolha + " colou velcro com o outro " + "<br>Empate zica"; 
         break;
         case "Heroína":
-            contaEmpate.contaTes++;         
-            votoEmpTes.innerHTML = "empates: " + contaEmpate.contaTes;    
+        contaEmpate.contaTes++;         
+        votoEmpTes.innerHTML = "empates: " + contaEmpate.contaTes;    
         resultado.innerHTML = "Briguinha de agulhas da " + escolha + "<br>Empate, que lixo"; 
         break;        
     }  
