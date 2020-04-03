@@ -20,6 +20,7 @@ const votoEmpTes = document.querySelector(".empates > .ept");
 const votoDerTes = document.querySelector(".derrotas > .dt");
 var mensagemResultado = document.querySelector("header > h1");
 var imgHeader = document.getElementById("cabecalho");
+var videoHeader = document.getElementById("video");
 var badgeUsr = document.getElementById("usuario");
  var avatarUsr = document.getElementById("avatarUsr");
 // PLAYERS     
@@ -148,21 +149,21 @@ function escolhaPC() {
 
 function shakeCrack() {    
     tela.classList.add("shake");            
-    setTimeout( () => tela.classList.remove("shake"), 1200);        
+    setTimeout( () => tela.classList.remove("shake"), 1000);        
     efeito.classList.add("shakecrack");            
-    setTimeout( () => efeito.classList.remove("shakecrack"), 1200);        
+    setTimeout( () => efeito.classList.remove("shakecrack"), 1000);        
  }
  function shakeLsd() {  
     tela.classList.add("shake");            
-    setTimeout( () => tela.classList.remove("shake"), 1200);          
+    setTimeout( () => tela.classList.remove("shake"), 1000);          
     efeito.classList.add("shakelsd");            
-    setTimeout( () => efeito.classList.remove("shakelsd"), 1200);        
+    setTimeout( () => efeito.classList.remove("shakelsd"), 1000);        
  }
  function shakeHeroina() {    
     tela.classList.add("shake");            
-    setTimeout( () => tela.classList.remove("shake"), 1200);        
+    setTimeout( () => tela.classList.remove("shake"), 1000);        
     efeito.classList.add("shakeheroina");            
-    setTimeout( () => efeito.classList.remove("shakeheroina"), 1200);        
+    setTimeout( () => efeito.classList.remove("shakeheroina"), 1000);        
  }
  function vitoriaCrack() {        
     efeito.classList.add("vitoriacrack");            
@@ -180,17 +181,24 @@ function shakeCrack() {
     efeito.classList.add("empatebosta");            
     setTimeout( () => efeito.classList.remove("empatebosta"), 500);        
  }
-
+ function stopGame() {
+    pedra.classList.add("stop");
+    papel.classList.add("stop");
+    tesoura.classList.add("stop");
+ }
+function playVideo() {
+    videoHeader.play();
+    videoHeader.style.display = "block";    
+}
 function vitoria(escolha, pc) {
     usrPontos++;
     placarUsr.innerHTML = usrPontos;    
     if (usrPontos === 10) {
         mensagemResultado.innerHTML = "CHUPA " + nomePc;                
-        imgHeader.classList.add("vitoriaUsr");
-        pedra.classList.add("stop");
-        papel.classList.add("stop");
-        tesoura.classList.add("stop");
-        setTimeout( () => location.reload(), 5000);        
+        // imgHeader.classList.add("vitoriaUsr");
+        playVideo();
+        stopGame();
+        setTimeout( () => location.reload(), 10000);        
     }
     // let divEscolha = document.getElementById(escolha);
     switch (escolha) {
@@ -221,11 +229,10 @@ function derrota(escolha, pc) {
     placarPC.innerHTML = pcPontos;               
     if (pcPontos === 10) {
         mensagemResultado.innerHTML = "VOCÊ PERDEU " + nomeUsr;
-        imgHeader.classList.add("vitoriaPc");        
-        pedra.classList.add("stop");
-        papel.classList.add("stop");
-        tesoura.classList.add("stop");
-        setTimeout( () => location.reload(), 5000);
+        // imgHeader.classList.add("vitoriaPc");    
+        playVideo();
+        stopGame();
+        setTimeout( () => location.reload(), 10000);
     }
     // let divEscolha = document.getElementById("escolha");
     switch (pc) {
