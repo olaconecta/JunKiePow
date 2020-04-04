@@ -60,6 +60,7 @@ var contaEmpate =
         "contaTes" : 0,
     }
  ;
+ 
  const tela = document.getElementById("tela");        
  const efeito = document.getElementById("efeito");        
  

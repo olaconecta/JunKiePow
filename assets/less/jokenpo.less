@@ -359,19 +359,26 @@ header {
                     width: 75px;
                     height: auto;
                     border-radius: 50%;
-                    border: 3px groove @shinyred                    
-                    // position: relative;
+                    border: 3px groove @shinyred;                    
+                    position: relative;
                     // z-index: 5;
+                    &:hover {
+                        border: 3px ridge @azul;
+                    }                    
+                    &:active {
+                        border: 3px ridge @green;
+                    }                    
+                    &.checked {
+                        border: 3px ridge @azul;
+                    }                    
                 }                
-                // input[type="radio"] {
-                //     position: relative;
-                //     z-index:1;
-                //     width: 80px;
-                //     height: 80px;
-                //     top:-84px
-
-                // }
-
+                input[type="radio"] {
+                    position: relative;
+                    z-index:1;
+                    width: 0;
+                    height: 0;
+                    opacity: 0;                    
+                }            
             }
         }
         .envia {
@@ -405,7 +412,14 @@ header {
         }
     }
 }
-
+.checked {
+    border: 3px ridge @azul!important;
+    // display:block; 
+    box-shadow: 14px 10 8px @shinyred!important;   
+    width: 75px;
+    height: auto;      
+    position: relative;
+}   
 .brave {
     width: 310px;
     font-size: 12px;

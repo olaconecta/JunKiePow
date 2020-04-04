@@ -79,10 +79,11 @@
     <script>
         const btEnvia = document.getElementById("btEnvia");
         btEnvia.disabled = true;  
-        const label = document.querySelectorAll(".pega-avatar > label");
+        // const imagem = document.querySelectorAll(".pega-avatar > label   > img");
         function habilita() {
             btEnvia.disabled = false;
-        }                
+            imagem.classList.add("checked");
+        }                        
     </script>
 </body>
 </html>
